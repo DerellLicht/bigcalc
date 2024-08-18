@@ -6,6 +6,10 @@ all: bigcalc.exe
 
 clean:
 	rm -f *.exe *.o *~
+	
+dist:
+	rm -f *.zip
+	zip bigcalc6.zip bigcalc.exe bigcalc.faq bigcalc.txt readme.md  
 
 bigcalc.exe: $(OBJS)
 	gcc -s $^ -o $@
